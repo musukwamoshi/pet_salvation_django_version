@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" context="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <link href="{% static "pets/css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "pets/css/fontawesome.min.css" %}" rel="stylesheet">
+    <link href="{% static "pets/css/main.css" %}" rel="stylesheet">
+
+    <title>ClaimYourPet</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">ClaimYourPet</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item">
+
+          <a href="{%url 'index' %}" class="nav-link"  role="button" aria-haspopup="true" aria-expanded="false">HOME</a>
+
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'add' %}" role="button" aria-haspopup="true" aria-expanded="false">ADD PET</a>
+          </li>
+                            
+
+         <li class="nav-item">
+
+          <a class="nav-link"  href="{%url 'contact' %}"   role="button" aria-haspopup="true" aria-expanded="false">CONTACT</a>
+
+         </li>
+
+        <li class="nav-item">
+          
+          <a class="nav-link" href="{%url 'about' %}" role="button" aria-haspopup="true" aria-expanded="false">ABOUT</a>
+
+        </li>
+
+        </ul>
+
+      </div>
+    </nav>
+
+        {% if messages %}
+               {% for msg in messages %}
+                    <div class="alert alert-info alert-dismissable">
+                       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                       {{msg.message}}
+                    </div>
+               {% endfor %}
+        {% endif %}
+
+        {% block content %} {% endblock %}
+
+
+
+        <script type="text/javascript" src="{% static "pets/js/jquery-2.1.3.min.js" %}" defer></script>
+        <script type="text/javascript" src="{% static "pets/js/bootstrap.min.js" %}" defer></script>
+        <script type="text/javascript" src="{% static "pets/js/main.js" %}" defer>
+        </script>
+
+        <footer id="footer">
+               <p class="footer">Copyright &copy Front end and back end design by M.M.M</p>
+        </footer>
+
+      </div>
+</body>
+
+</html>

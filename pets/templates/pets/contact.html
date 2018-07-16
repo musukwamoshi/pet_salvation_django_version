@@ -1,0 +1,81 @@
+{%extends "pets/Layout.html" %}
+
+
+{% block content %}
+<div class="row">
+    <div class="col-xs-3 col-sm-2"></div>
+    <div class="col-xs-9 col-sm-8">
+
+    	
+                <form action="{% url 'contact' %}" method="post">
+                    {% csrf_token %} 
+
+                    <div class="card">
+                         <div class="card-body">
+
+
+                	<div class="form-group">
+                        <label for="exampleInputEmail1">Name:</label>
+
+                         {{form.name}}
+                	</div>
+
+                	<div class="form-group">
+                         <label for="exampleInputPassword1">Town:</label>
+                         {{form.town}}
+
+                	</div>
+            
+                	<div class="form-group">
+                         <label for="exampleInputPassword1">Province:</label>
+                         {{form.province}}
+           
+                	</div>
+
+
+                	<div class="form-group">
+                         <label for="exampleInputEmail1">Area:</label>
+                         {{form.area}}
+
+                	</div>
+
+                	<div class="form-group">
+                         <label for="exampleInputEmail1">Contact Number:</label>
+                         {{form.contact}}
+
+                	</div>
+
+                	<div class="form-group">
+                         <label for="exampleInputEmail1">Email:</label>
+                         {{form.email}}
+
+                	</div>
+
+
+                	<div class="form-group">
+                          <label for="exampleInputPassword1">Message:</label>
+                          {{form.message}}
+
+    
+                	</div>
+
+                     
+                    <div class="form-group">
+                      <input type="submit"  class="btn btn-info btn-block form-control" value="Submit" />
+                    </div>
+
+
+
+                      </div>        
+                     </div>
+
+                   </div>  
+                </form>
+
+ <!-- Optional: clear the XS cols if their content doesn't match in height -->
+  <div class="clearfix visible-xs-block"></div>
+  <div class="col-xs-3 col-sm-2"></div>
+
+</div>
+
+{% endblock %}

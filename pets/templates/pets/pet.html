@@ -1,0 +1,94 @@
+{%extends "pets/Layout.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-xs-3 col-sm-2"></div>
+    <div class="col-xs-9 col-sm-8">
+
+    	
+            <form multipart action="{% url 'add' %}" method="post">
+                    {% csrf_token %} 
+
+                    <div class="card">
+                         <div class="card-body">
+
+              
+              
+                <div class="form-group">
+                        <label for="exampleInputEmail1">Posted By:</label>
+
+                         {{form.poster}}
+                </div>
+
+                <div class="form-group">
+                         <label for="exampleInputPassword1">Town:</label>
+                         {{form.town}}
+
+                </div>
+            
+                <div class="form-group">
+                         <label for="exampleInputPassword1">Province:</label>
+                         {{form.province}}
+           
+                </div>
+
+
+                <div class="form-group">
+                         <label for="exampleInputEmail1">Area:</label>
+                         {{form.area}}
+
+                </div>
+
+                <div class="form-group">
+                         <label for="exampleInputEmail1">Phone Number:</label>
+                         {{form.contact}}
+
+                </div>
+
+                <div class="form-group">
+                         <label for="exampleInputEmail1">Email:</label>
+                         {{form.email}}
+
+                </div>
+
+
+                <div class="form-group">
+                          <label for="exampleInputPassword1">Description:</label>
+                          {{form.description}}
+
+    
+                </div>
+
+
+                <div id='uploadContainer' class="form-group">
+
+                </div>
+
+                <h4 class='text-center'>Click add file to upload image(s)</h4>
+
+         
+                <a id='addfile' href='#addfile' class='btn btn-info btn-block'>Add File</a>
+
+       
+                 <div class='form-group'></div>
+
+                    
+                <div class="form-group">
+                   <input type="submit" class="btn btn-info btn-block form-control" value="Submit" />
+                </div>
+
+
+
+                      </div>        
+                  </div>
+
+                </div>  
+            </form>
+
+ <!-- Optional: clear the XS cols if their content doesn't match in height -->
+  <div class="clearfix visible-xs-block"></div>
+  <div class="col-xs-3 col-sm-2"></div>
+
+</div>
+
+{% endblock %}
