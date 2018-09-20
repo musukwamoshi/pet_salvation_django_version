@@ -1,12 +1,13 @@
 {%extends "pets/Layout.html" %}
 
 {% block content %}
+
 <div class="row">
     <div class="col-xs-3 col-sm-2"></div>
     <div class="col-xs-9 col-sm-8">
 
     	
-            <form multipart action="{% url 'add' %}" method="post">
+            <form enctype="multipart/form-data" action="{% url 'add' %}" method="post">
                     {% csrf_token %} 
 
                     <div class="card">
@@ -67,7 +68,7 @@
                 <h4 class='text-center'>Click add file to upload image(s)</h4>
 
          
-                <a id='addfile' href='#addfile' class='btn btn-info btn-block'>Add File</a>
+                <a id='addfile' href='#addfile' class='btn btn-info btn-block'>Add Image</a>
 
        
                  <div class='form-group'></div>

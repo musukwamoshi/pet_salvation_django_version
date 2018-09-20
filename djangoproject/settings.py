@@ -131,3 +131,139 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = ( os.path.join('static'), )
+
+
+PROVINCE_OPTIONS= [
+
+                      ('', 'Select Province'),
+                      ('Central', 'Central'),
+                      ('Copperbelt', 'Copperbelt'),
+                      ('Lusaka', 'Lusaka'),
+                      ('Southern', 'Southern'),
+                      ('Luapula', 'Luapula'),
+                      ('Northern', 'Northern'),
+                      ('Eastern', 'Eastern'),
+                      ('Western', 'Western'),
+                      ('North Western', 'North Western'),
+                      ('Muchinga', 'Muchinga'),
+                    ]
+
+TOWN_OPTIONS = (
+         
+                        ('Copperbelt', (
+                                     ('Chambeshi', 'Chambeshi'),
+                                     ('Chililabombwe', 'Chililabombwe'),
+                                     ('Chingola', 'Chingola'),
+                                     ('Kitwe', 'Kitwe'),
+                                     ('Ndola', 'Ndola'),
+                                     ('Mufulira', 'Mufulira'),
+                                     ('Kalulushi', 'Kalulushi'),
+                                     ('Masaiti', 'Masaiti'),
+                                     ('Lufwanyama', 'Lufwanyama'),
+                                 )
+                        ),
+
+                        ('Lusaka', (
+                                ('Kafue', 'Kafue'),
+                                ('Lusaka', 'Lusaka'),
+                                ('Chilanga', 'Chilanga'),
+                                ('Luangwa', 'Luangwa'),
+                             )
+                        ),
+
+                        ('Central', (
+                                ('Kabwe', 'Kabwe'),
+                                ('Kapiri Mposhi', 'Kapiri Mposhi'),
+                                ('Mkushi', 'Mkushi'),
+                                ('Chirundu', 'Chirundu'),
+                                ('Mumbwa', 'Mumbwa'),
+                                ('Serenje', 'Serenje'),
+                             )
+                        ),
+
+                        ('Southern', (
+                                ('Siavonga', 'Siavonga'),
+                                ('Mazabuka', 'Mazabuka'),
+                                ('Livingstone', 'Livingstone'),
+                                ('Kalomo', 'Kalomo'),
+                                ('Maamba', 'Maamba'),
+                                ('Chirundu', 'Chirundu'),
+                                ('Zimba', 'Zimba'),
+                                ('Monze', 'Monze'),
+                                ('Namwala', 'Namwala'),
+                                ('Pemba', 'Pemba'),
+                             )
+                        ),
+
+
+                        ('North Western', (
+                                ('Solwezi', 'Solwezi'),
+                                ('Mwinilunga', 'Mwinilunga'),
+                                ('Kansanshi', 'Kansanshi'),
+                                ('Chavuma', 'Chavuma'),
+                                ('Mufumbwe', 'Mufumbwe'),
+                                ('Lumwana', 'Lumwana'),
+                                ('Kabompo', 'Kabompo'),
+                                ('Zambezi', 'Zambezi'),
+                                ('Mutanda', 'Mutanda'),
+                             )
+                        ),
+
+
+                        ('Eastern', (
+                                ('Chipata', 'Chipata'),
+                                ('Lundazi', 'Lundazi'),
+                                ('Katete', 'Katete'),
+                                ('Chadiza', 'Chadiza'),
+                                ('Petauke', 'Petauke'),
+                                ('Nyimba', 'Nyimba'),
+                             )
+                        ),
+
+
+                        ('Luapula', (
+                                ('Mansa', 'Mansa'),
+                                ('Nchelenge', 'Nchelenge'),
+                                ('Samfya', 'Samfya'),
+                                ('Kashikishi', 'Kashikishi'),
+                                ('Mbereshi', 'Mbereshi'),
+                                ('Kataba', 'Kataba'),
+                                ('Kazembe', 'Kazembe'),
+                             )
+                        ),
+
+                        ('Northern', (
+                                ('Kasama', 'Kasama'),
+                                ('Mbala', 'Mbala'),
+                                ('Luwingu', 'Luwingu'),
+                                ('Mporkoso', 'Mporokoso'),
+                                ('Mpulungu', 'Mpulungu'),
+                             )
+                        ),
+
+                        ('Muchinga', (
+                                ('Nakonde', 'Nakonde'),
+                                ('Isoka', 'Isoka'),
+                                ('Mpika', 'Mpika'),
+                                ('Chinsali', 'Chinsali'),
+                                ('Mafinga', 'Mafinga'),
+                                ('Chama', 'Chama'),
+                             )
+                        ),
+
+
+                        ('Western', (
+                                ('Kaoma', 'Kaoma'),
+                                ('Kalabo', 'Kalabo'),
+                                ('Mongu', 'Mongu'),
+                                ('Mulobezi', 'Mulobezi'),
+                                ('Lukulu', 'Lukulu'),
+                                ('Sesheke', 'Sesheke'),
+                             )
+                        ),
+
+
+
+
+                )
+

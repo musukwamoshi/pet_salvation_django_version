@@ -41,7 +41,7 @@ def set_pet(request):
 # if this is a POST request we need to process the form data
     if request.method == 'POST':
         # create a pet form instance and populate it with data from the request:
-        form = PetForm(request.POST)
+        form = PetForm(request.POST,request.FILES)
         # check whether it's valid
         if form.is_valid():
             # process the data in form.cleaned_data as required
@@ -49,11 +49,15 @@ def set_pet(request):
             obj = Pets() 
             obj.petname = form.cleaned_data['petname']
             obj.poster = form.cleaned_data['poster']
-            obj.contact = form.cleaned_data['poster_contact']
+            obj.email = form.cleaned_data['email']
+            obj.area = form.cleaned_data['area']
+            obj.town = form.cleaned_data['town']
+            obj.phone_number = form.cleaned_data['contact']
             obj.description = form.cleaned_data['description']
+            obj.filename = form.cleaned_data['file'].name
             #finally save the object in db
             obj.save()
-            messages.success(request, 'Your submission was Successfully Saved')
+            messages.success(request, 'Your submission was successfully Saved')
 
             # redirect to a new URL:
             return HttpResponseRedirect('pets')

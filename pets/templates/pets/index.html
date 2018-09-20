@@ -1,10 +1,18 @@
-{%extends 'pets/Layout.html'%}
-
-<h1>{{PetName}}</h1>
-
-{% for pet in pets%}
- 
- #show pets
+{%extends 'pets/Layout.html'%} {% block content %} {% for pet in pets%}
 
 
-{% endfor %}
+
+<div class="card">
+    <img class="card-img-top" src="{%url 'media/{{pet.file}}' %}" alt="Card image cap">
+
+    <div class="card-body">
+        <h5 class="card-title"><strong>Posted By:</strong>{{pet.poster}}</h5>
+        <p class="card-text"></p>
+        <p class="card-text"><small class="text-muted">{{pet.date_posted}}</small></p>;
+    </div>
+</div>
+
+
+
+
+{% endfor %} {% endblock %}
